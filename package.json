@@ -1,0 +1,29 @@
+{
+  "name": "graphql-intro",
+  "version": "1.0.0",
+  "description": "An Introduction to GraphQL concepts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimobrian/GraphQL-Intro.git"
+  },
+  "keywords": [
+    "GraphQL",
+    "NodeJS",
+    "Intro"
+  ],
+  "author": "O'Brian Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimobrian/GraphQL-Intro/issues"
+  },
+  "homepage": "https://github.com/kimobrian/GraphQL-Intro#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.11.7"
+  }
+}
