@@ -22,9 +22,9 @@ var users = [
     gender: 'M'
   },
   {
-    id:4,
+    id:3,
     name: 'Faith',
-    age: '24',
+    age: '23',
     gender: 'F'
   },
   {
@@ -38,7 +38,7 @@ var users = [
 var schema = buildSchema(`
   type Query {
     user(id: Int!): Person
-    users: [Person]
+    users(gender: String): [Person]
   },
   type Person {
     id: Int
@@ -56,7 +56,12 @@ var getUser = function(args) {
 }
 
 var retrieveUsers = function(args) {
-
+  if(args.gender) {
+    var gender = args.gender;
+    return users.filter(user => user.gender === gender);
+  } else {
+    return users;
+  }
 }
 
 var root = { 
